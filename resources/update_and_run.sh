@@ -12,10 +12,10 @@ pkill -f $APP_NAME || echo "No currently running process for app"
 
 # update the jar file
 echo 'Updating jar file'
-cp $JAR_FILE $APP_DIR/$APP_NAME
+sudo cp $JAR_FILE $APP_DIR/$APP_NAME
 
 # start the application with the new jar file
 echo 'Starting new application'
-nohup javar -jar $APP_DIR/$APP_NAME 
+nohup java -jar $APP_DIR/$APP_NAME 
 
 # todo: logging
